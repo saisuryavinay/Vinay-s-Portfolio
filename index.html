@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinay | Portfolio</title>
+    <link rel="stylesheet" href="my_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="../icons/Royal_Golden_Emblem_with_Crown-removebg-preview.png">
+</head>
+<body>
+    <!-- Nav-bar -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="../icons/Screenshot_2025-07-18_214740-removebg-preview.png" alt="">
+        </div>
+        <div class="nav-links">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#cetifications">Cetifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </div>
+    </div>
+    <div class="Home" id="Home">
+        <div class="intro-section">
+            <p>Hi 👋,This is</p>
+            <h2>SAI SURYA VINAY</h2>
+        </div>
+        <div class="slider-section">
+            <h1>
+            I'M A
+            <span class="word-slider">
+                <span>
+                CODER<br>
+                DEVELOPER<br>
+                PROGRAMMER<br>
+                GAMER<br>
+                DESIGNER<br>
+                </span>
+            </span>
+            </h1>
+        </div>
+        <div class="my-image">
+            <img src="./My_image.jpg" alt="">
+        </div>
+        <div class="btns">
+             <!-- View Resume Button -->
+            <a class="view-resume" href="Sai_Surya_Vinay_Resume.pdf" target="_blank">
+                View Resume
+            </a>
+            <!-- Download Resume Button -->
+            <a class="resume-btn" href="resume.pdf" download="Sai_Surya_Vinay_Resume.pdf">
+                📄 Download Resume
+            </a>
+        </div>
+    </div>
+    <br>
+    <div id="skills" class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="../Portfolio-images/html (2).png" class="skill-icon" alt="HTML" />
+                <h4>HTML</h4>
+            </div>
+            <div class="skill-card">
+                <img src="../Portfolio-images/css.png" class="skill-icon" alt="CSS" />
+                <h4>CSS</h4>
+            </div>
+            <div class="skill-card">
+                <img src="../Portfolio-images/javascript.png" class="skill-icon" alt="JavaScript" />
+                <h4>JavaScript</h4>
+            </div>
+            <div class="skill-card">
+                <img src="../Portfolio-images/bootstrap.png" class="skill-icon" alt="Bootstrap" />
+                <h4>Bootstrap</h4>
+            </div>
+            <div class="skill-card">
+                <img src="../Portfolio-images/java.png" class="skill-icon" alt="java" />
+                <h4>Java</h4>
+            </div>
+            <div class="skill-card">
+                <img src="../Portfolio-images/python.png" class="skill-icon" alt="python" />
+                <h4>Python</h4>
+            </div>
+        </div>
+  </div>
+  <!-- Cetifications -->
+<div class="certifications" id="cetifications">
+  <div class="naame">
+    <h1>Certifications</h1>
+    <div class="parent">
+      <div class="item">
+        <img src="../Portfolio-images/java-ceti.png" alt="Java Certification">
+        <h4>Java</h4>
+      </div>
+      <div class="item">
+        <img src="../Portfolio-images/Python_redhat.png" alt="Python Redhat Certification">
+        <h4>Python</h4>
+      </div>
+      <div class="item">
+        <img src="../Portfolio-images/new-html.png" alt="HTML Certification">
+        <h4>HTML</h4>
+      </div>
+      <div class="item">
+        <img src="../Portfolio-images/new-css.png" alt="CSS Certification">
+        <h4>CSS</h4>
+      </div>
+      <div class="item">
+        <img src="../Portfolio-images/sql-2.png" alt="SQL Certification">
+        <h4>SQL</h4>
+      </div>
+      <div class="item">
+        <img src="../Portfolio-images/aws.png" alt="AWS Certification">
+        <h4>AWS-CLOUD</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="projects" id="projects">
+  <h2 class="section-title">My Projects</h2>
+  <div class="cards-row">
+    <div class="project-card">🚀 Coming Soon</div>
+    <div class="project-card">🚀 Coming Soon</div>
+  </div>
+</div>
+
+<!-- cotact -->
+<div id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch / Leave Me Your Info</h2>
+    <form name="submit-to-google-sheet" class="contact-form">
+      <div class="form-group">
+        <input type="text" name="Name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="Email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
+    <span id="msg" style="color: green; font-weight: 500; display: block; margin-top: 10px;"></span>
+  </div>
+</div>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzWhcYBC3qLTXIe56kFb6-6yh9-eAHQKK6iiyiSWygqIUaUL3xZSScvJA9UJKIdP2Vq/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        msg.innerHTML = "✅ Message sent successfully!";
+        msg.style.color = "green";
+        setTimeout(() => msg.innerHTML = "", 50000);
+        form.reset();
+      })
+      .catch(error => {
+        msg.innerHTML = "❌ Error sending message!";
+        msg.style.color = "red";
+        console.error('Error!', error.message);
+      });
+  });
+</script>
+<div class="footer" id="contact">
+    <div class="footer-matter">
+        <h2>DEVU SAI SURYA VINAY</h2>
+        <p>Thank you for seeing and Rate my Portfolio ⭐</p>
+        <div class="social-icons">
+          <a href="https://github.com/saisuryavinay" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vinay-devu" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/_sai_surya_vinay_/" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/6303445069" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        </div>
+          <p class="copyright">© 2025 Vinay. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
